@@ -1,4 +1,4 @@
-import { Center } from "@mantine/core"
+import { Anchor, Center } from "@mantine/core"
 
 const Footer = () => {
 
@@ -8,7 +8,7 @@ const Footer = () => {
             height: '100px',
             bottom: '0px'
         }}>
-            <footer>Built with <a href="https://nextjs.org/">Next.js</a> &amp; <a href="https://mantine.dev/">Mantine</a>. Powered by <a href="https://vercel.com/">Vercel</a></footer>
+            <footer>Built with <Anchor href="https://nextjs.org/">Next.js</Anchor> &amp; <Anchor href="https://mantine.dev/">Mantine</Anchor>. Powered by <Anchor href="https://vercel.com/">Vercel</Anchor></footer>
         </Center>
     )
  }

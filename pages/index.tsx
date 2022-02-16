@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
-import { Container, Button, Switch, useMantineColorScheme } from '@mantine/core'
+import { Image, Container, Group, Grid, Space, Switch, Text, Title, useMantineColorScheme } from '@mantine/core'
+import FrostedPaper from '../components/FrostedPaper'
 
 export default function Home() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
@@ -14,10 +15,43 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <Container>
-          <Button onClick={()=> toggleColorScheme()}>Click</Button>
-          <Switch checked={isDarkMode} onClick={()=> toggleColorScheme()} readOnly></Switch>
-        </Container>
+      <Container>
+        <Space h="md" />
+
+        <Group>
+          <>Dark Mode: </>
+          <Switch checked={isDarkMode} onClick={() => toggleColorScheme()} readOnly onLabel="ON" offLabel="OFF" size="xl"></Switch>
+        </Group>
+
+        <Space h="md" />
+
+        <FrostedPaper>
+          <Grid>
+            <Grid.Col span={3}>
+              <div
+                style={{
+                  width: 200,
+                }}
+              >
+                <Image src="/profile-photo.jpg" radius={'xl'} />
+              </div>
+            </Grid.Col>
+            <Grid.Col span={9} style={{ padding: 10 }}>
+              <Title order={2}>Sergen ORIN</Title>
+              <Text
+                sx={(theme) => ({
+                  transition: 'color 0.2s ease-in-out',
+                  '&:hover': {
+                    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
+                  },
+                })}
+              >
+                Full-stack Web Developer
+              </Text>
+            </Grid.Col>
+          </Grid>
+        </FrostedPaper>
+      </Container>
     </div>
   )
 }
