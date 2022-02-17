@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
-import { Image, Container, Group, Grid, Space, Switch, Text, Title, useMantineColorScheme } from '@mantine/core'
+import { Box, Image, Container, Group, Grid, Space, Switch, Text, Title, useMantineColorScheme } from '@mantine/core'
 import FrostedPaper from '../components/FrostedPaper'
 
 export default function Home() {
@@ -28,26 +28,76 @@ export default function Home() {
         <FrostedPaper>
           <Grid>
             <Grid.Col span={3}>
-              <div
-                style={{
-                  width: 200,
-                }}
-              >
-                <Image src="/profile-photo.jpg" radius={'xl'} />
-              </div>
-            </Grid.Col>
-            <Grid.Col span={9} style={{ padding: 10 }}>
-              <Title order={2}>Sergen ORIN</Title>
-              <Text
+              <Box
+                component="div"
                 sx={(theme) => ({
-                  transition: 'color 0.2s ease-in-out',
-                  '&:hover': {
-                    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
-                  },
+                  width: 200,
+                  borderRadius: theme.radius.xl,
                 })}
               >
-                Full-stack Web Developer
-              </Text>
+                <Image
+                  src="/profile-photo.jpg"
+                  radius={'xl'}
+                  sx={(theme) => ({
+                    transition: 'transform 0.25s ease-in-out',
+                    borderRadius: theme.radius.xl,
+                    '&:hover': {
+                      transform: 'translateY(-1px) scale(1.02) translateZ(0) ',
+                    },
+                    '&::after': {
+                      content: '""',
+                      position: 'absolute',
+                      zIndex: -1,
+                      width: '100%',
+                      height: '100%',
+                      opacity: 0,
+                      top: '0px',
+                      borderRadius: theme.radius.xl,
+                      boxShadow: '0 5px 15px rgba(0,0,0,0.15)',
+                      transition: 'opacity 0.25s ease-in-out',
+                    },
+                    '&:hover::after': {
+                      opacity: 1,
+                    },
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden',
+                  })}
+                />
+              </Box>
+            </Grid.Col>
+            <Grid.Col span={9} style={{ padding: 10 }}>
+              <Group direction="column" spacing={0}>
+                <Title
+                  order={2}
+                  sx={(theme) => ({
+                    color: theme.colorScheme === 'dark' ? theme.colors.gray[3] : theme.colors.dark[8],
+                    transition: 'transform 0.25s ease-in-out',
+                    transformOrigin: 'top left',
+                    '&:hover': {
+                      color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
+                      transform: 'translateY(0px) scale(1.02) translateZ(0) ',
+                    },
+                    WebkitFontSmoothing: 'subpixel-antialiased',
+                    willChange: 'transform',
+                  })}
+                >
+                  Sergen ORIN
+                </Title>
+                <Text
+                  sx={(theme) => ({
+                    transition: 'color 0.2s ease-in-out, transform 0.25s ease-in-out',
+                    transformOrigin: 'top left',
+                    '&:hover': {
+                      color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
+                      transform: 'translateY(0px) scale(1.02) translateZ(0) ',
+                    },
+                    WebkitFontSmoothing: 'subpixel-antialiased',
+                    willChange: 'transform',
+                  })}
+                >
+                  Full-stack Web Developer
+                </Text>
+              </Group>
             </Grid.Col>
           </Grid>
         </FrostedPaper>
