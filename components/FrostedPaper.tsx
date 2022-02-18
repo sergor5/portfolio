@@ -8,10 +8,10 @@ const FrostedPaper = ({ children }) => {
       withBorder
       sx={(theme) => {
         return {
-          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] + 'a6' : theme.colors.gray[2] + 'a6',
+          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] + 'a6' : '#ffffffa6',
           transition: 'background-color 0.2s ease-in-out, transform 0.2s ease-in-out',
           '&:hover': {
-            backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] + 'a6' : theme.colors.gray[1] + 'a6',
+            backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] + 'a6' : theme.colors.gray[0] + 'a6',
             transform: 'translateY(-1px) scale(1.02) translateZ(0) ',
           },
           backdropFilter: 'blur(25px)',

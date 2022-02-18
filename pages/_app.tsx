@@ -27,6 +27,7 @@ function MyApp(props: AppProps) {
           withGlobalStyles
           withNormalizeCSS
           theme={{
+            white: '#f8f9fb',
             colors: {
               brand: ['#EBFBEE', '#D3F9D8', '#B2F2BB', '#8CE99A', '#69DB7C', '#51CF66', '#40C057', '#37B24D', '#2F9E44', '#2B8A3E'],
             },
