@@ -1,13 +1,10 @@
-import Footer from './Footer'
-import { AppShell } from '@mantine/core'
-import CustomHeader from './Header'
+import Footer from './Footer';
 
 export default function Layout({ children }) {
-  return (
-    <AppShell padding={0}>
-      <CustomHeader padding="md" height={80} />
-      {children}
-      <Footer />
-    </AppShell>
-  )
+    return (
+        <>
+            <main>{ children }</main>
+        <Footer/>
+        </>
+    )
 }
