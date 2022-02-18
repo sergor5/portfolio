@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Sergen ORIN's Personal Website</title>
+        <title>Sergen ORIN&apos;s Personal Website</title>
         <meta name="description" content="Sergen ORIN's Personal Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
