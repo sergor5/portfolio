@@ -1,17 +1,20 @@
-import { Center } from "@mantine/core"
+import { Anchor, Center } from '@mantine/core'
 
 const Footer = () => {
-
-    return (
-        <Center style={{
-            width: '100%',
-            height: '100px',
-            bottom: '0px'
-        }}>
-            <footer>Built with <a href="https://nextjs.org/">Next.js</a> &amp; <a href="https://mantine.dev/">Mantine</a>. Powered by <a href="https://vercel.com/">Vercel</a></footer>
-        </Center>
-    )
- }
-
+  return (
+    <Center
+      style={{
+        width: '100%',
+        height: '100px',
+        bottom: '0px',
+        padding: '10px',
+      }}
+    >
+      <footer>
+        Built with <Anchor href="https://nextjs.org/">Next.js</Anchor> &amp; <Anchor href="https://mantine.dev/">Mantine</Anchor>. Powered by <Anchor href="https://vercel.com/">Vercel</Anchor>
+      </footer>
+    </Center>
+  )
+}
 
 export default Footer
