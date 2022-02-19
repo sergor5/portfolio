@@ -5,7 +5,7 @@ import styles from '../styles/Layout.module.scss'
 
 export default function Layout({ children }) {
   return (
-    <AppShell fixed style={{ position: 'relative' }} header={<CustomHeader padding="md" height={80} />}>
+    <AppShell fixed style={{ position: 'relative' }} styles={{ main: { paddingLeft: 0 } }} header={<CustomHeader padding="md" height={80} />}>
       {children}
       <Footer />
       {/* <div className={styles['custom-shape']}>
