@@ -14,7 +14,7 @@ const FrostedPaper = ({ children, style = {} }) => {
             backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] + 'a6' : theme.colors.gray[0] + 'a6',
             transform: 'translateY(-1px) scale(1.02) translateZ(0) ',
           },
-          backdropFilter: 'blur(25px)',
+          backdropFilter: 'blur(15px)',
           boxShadow: theme.shadows.lg + ', inset 0 1px 0 1px rgba(255,255,255,0.1)',
           zIndex: '1',
           willChange: 'transform',
