@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Header, HeaderProps, Avatar, Burger, Drawer, Group, Switch, useMantineColorScheme } from '@mantine/core'
 
-const CustomHeader = (props: Omit<HeaderProps, 'children' | 'triggerDrawer'>) => {
+const CustomHeader = (props: Omit<HeaderProps, 'children'>) => {
   const [menuOpened, setMenuOpened] = useState(false)
   const title = menuOpened ? 'Close navigation' : 'Open navigation'
 
@@ -18,13 +18,14 @@ const CustomHeader = (props: Omit<HeaderProps, 'children' | 'triggerDrawer'>) =>
       </Drawer>
 
       <Header
+        fixed
         {...props}
         sx={(theme) => {
           return {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            backdropFilter: 'blur(25px)',
+            backdropFilter: 'blur(10px)',
             backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] + 'a6' : '#ffffffa6',
           }
         }}

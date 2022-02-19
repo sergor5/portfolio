@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Center, Image, Container, Group, Grid, Space, Text, Title } from '@mantine/core'
 import FrostedPaper from '../components/FrostedPaper'
+import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
@@ -11,10 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container style={{ minHeight: 800 }}>
-        <Space h="md" />
-
-        <Space h="md" />
+      <Container style={{ minHeight: 900 }}>
+        <Space h="lg" />
 
         <FrostedPaper>
           <Grid>

@@ -1,11 +1,11 @@
-import { Paper, useCss } from '@mantine/core'
-const FrostedPaper = ({ children }) => {
-  const { css, cx } = useCss()
+import { Paper } from '@mantine/core'
+const FrostedPaper = ({ children, style = {} }) => {
   return (
     <Paper
       padding="md"
       radius="xl"
       withBorder
+      style={style}
       sx={(theme) => {
         return {
           backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] + 'a6' : '#ffffffa6',
