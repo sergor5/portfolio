@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import { Header, HeaderProps, Avatar, Burger, Drawer, Group, Switch, useMantineColorScheme } from '@mantine/core'
+import { useState, useEffect } from 'react'
+import { Header as MantineHeader, HeaderProps, Avatar, Burger, Drawer, Group, Switch, Transition, useMantineColorScheme } from '@mantine/core'
 
-const CustomHeader = (props: Omit<HeaderProps, 'children'>) => {
+const Header = (props: Omit<HeaderProps, 'children'>) => {
   const [menuOpened, setMenuOpened] = useState(false)
   const title = menuOpened ? 'Close navigation' : 'Open navigation'
 
@@ -17,12 +17,13 @@ const CustomHeader = (props: Omit<HeaderProps, 'children'>) => {
         </Group>
       </Drawer>
 
-      <Header
+      <MantineHeader
         fixed
         {...props}
         sx={(theme) => {
           return {
             display: 'flex',
+            position: 'sticky',
             alignItems: 'center',
             justifyContent: 'space-between',
             backdropFilter: 'blur(10px)',
@@ -65,9 +66,9 @@ const CustomHeader = (props: Omit<HeaderProps, 'children'>) => {
             burger: { color: 'red' },
           }}
         />
-      </Header>
+      </MantineHeader>
     </>
   )
 }
 
-export default CustomHeader
+export default Header

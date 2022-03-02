@@ -1,0 +1,39 @@
+.custom-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 161px;
+    .shape-fill {
+      fill: #5affb6;
+    }
+  }
+}
+
+.custom-shape-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+  svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: clamp(120px, 1.3px, 161px);
+    .shape-fill {
+      fill: #5affb6;
+    }
+  }
+}

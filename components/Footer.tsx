@@ -1,10 +1,11 @@
 import { Anchor, Center, Text } from '@mantine/core'
 import FrostedPaper from './FrostedPaper'
+import FooterWave from './FooterWave'
 const Footer = () => {
   return (
     <Center
       style={{
-        position: 'absolute',
+        position: 'relative',
         width: '100%',
         height: '100px',
         bottom: '0px',
@@ -28,6 +29,7 @@ const Footer = () => {
           </Text>
         </FrostedPaper>
       </footer>
+      <FooterWave />
     </Center>
   )
 }
